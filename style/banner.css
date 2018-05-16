@@ -1,0 +1,63 @@
+﻿#slider:hover {
+    cursor: pointer;
+}
+
+#slider {
+    overflow: hidden;
+    position: relative;
+    /*border: 1px solid #ccc;*/
+    width: 730px;
+    height: 452px;
+}
+
+#slider>#gal {
+    transition: 0.5s;
+    position: relative;
+    left: 0;
+    width: 800%;
+    height: 100%;
+}
+
+#slider>#gal>.items {
+    float: left;
+    width: 730px;
+}
+
+#slider>#gal>.items>img {
+    /*width: 730px;*/
+    height: 452px;
+}
+
+#slider>#but:hover {
+    cursor: default;
+}
+
+#slider>#but {
+    background: rgba(255, 255, 255, 0.7);
+    position: relative;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    top: -40px;
+    height: 20px;
+}
+
+#slider>#but>li:hover {
+    cursor: pointer;
+    color: #f66907;
+}
+
+#slider>#but>li {
+    margin-left: 3px;
+    float: left;
+    width: 85px;
+    color: #333;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, Tahoma, Arial;
+}
+
+#slider>#but>.co {
+    border-left: 1px solid #999;
+}

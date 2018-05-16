@@ -1,0 +1,64 @@
+﻿.slider5 {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    /*border: 1px solid #ccc;*/
+    width: 210px;
+    height: 288px;
+}
+
+.slider5>.gallery5 {
+    /*border: 1px solid red;*/
+    transition: 0.5s;
+    position: relative;
+    left: 0;
+    width: 300%;
+    height: 100%;
+}
+
+.slider5>.gallery5>.items {
+    /*border: 1px solid red;*/
+    float: left;
+    width: 33.33%;
+    height: 100%;
+}
+
+.slider5>.gallery5>.items>.image {
+    width: 210px;
+    height: 212px;
+    margin: auto;
+}
+
+.slider5>.gallery5>.items>.image>img {
+    width: 97%;
+    height: 97%;
+}
+
+.slider5>.gallery5>.items>.tozih:hover {
+    transition: 0.3s;
+    color: #f66907;
+    cursor: pointer;
+}
+
+.slider5>.gallery5>.items>.tozih {
+    line-height: 16px;
+    font-size: 13px;
+    color: #585858;
+    font-family: Verdana, Tahoma, Arial, Bold, Regular;
+    width: 90%;
+    height: 32px;
+    margin: 6px auto 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+.slider5>.gallery5>.items>.price {
+    height: 30px;
+    margin-top: 5px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    color: #f66907;
+    line-height: 30px;
+    font-family: Verdana, Tahoma, Arial, Bold, Regular;
+}

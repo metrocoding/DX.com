@@ -1,0 +1,118 @@
+﻿        .slider {
+            overflow: hidden;
+            position: relative;
+            /*border: 1px solid #ccc;*/
+            width: 256px;
+            height: 548px;
+        }
+        
+        .slider>.gallery {
+            /*border: 1px solid red;*/
+            transition: 0.3s;
+            position: relative;
+            left: 0;
+            width: 200%;
+            height: 100%;
+        }
+        
+        .slider>.gallery>.items {
+            /*border: 1px solid red;*/
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+        
+        .slider>.gallery>.items>.it {
+            width: 100%;
+            position: relative;
+            height: 16.66%;
+            /*border: 1px solid red;*/
+        }
+        
+        .slider>.gallery>.items>.it>div {
+            float: left;
+            /*border: 1px solid red;*/
+        }
+        
+        .slider>.gallery>.items>.it>.left:hover {
+            cursor: pointer;
+        }
+        
+        .slider>.gallery>.items>.it>.left {
+            /*   border: 1px solid red;*/
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        .slider>.gallery>.items>.it>.left>img {
+            width: 70px;
+            height: 70px;
+        }
+        
+        .slider>.gallery>.items>.it>.right {
+            /*border: 1px solid red;*/
+            width: 140px;
+            height: 100%;
+        }
+        
+        .slider>.gallery>.items>.it>.right>div {
+            /*border: 1px solid red;*/
+            width: 140px;
+            height: 30px;
+            margin-top: 10px;
+        }
+        
+        .slider>.gallery>.items>.it>.right>.up:hover {
+            color: #f66907;
+            cursor: pointer;
+        }
+        
+        .slider>.gallery>.items>.it>.right>.up {
+            color: #585858;
+            font-family: Verdana, Tahoma, Arial, Bold, Regular;
+            font-size: 13px;
+            line-height: 15px;
+            text-align: left;
+        }
+        
+        .slider>.gallery>.items>.it>.right>.down {
+            font-weight: bold;
+            font-size: 14px;
+            text-align: left;
+            color: #f66907;
+            line-height: 25px;
+            font-family: Verdana, Tahoma, Arial, Bold, Regular;
+        }
+        
+        .slider>.rightt:hover {
+            transition: 0.3s;
+            background: url(../image/content/rightg.png) no-repeat 1px 0;
+            cursor: pointer;
+        }
+        
+        .slider>.rightt {
+            background: url(../image/content/rightw.png) no-repeat;
+            position: absolute;
+            top: 45%;
+            right: 7px;
+            width: 15px;
+            height: 23px;
+        }
+        
+        .slider>.leftt:hover {
+            transition: 0.3s;
+            background: url(../image/content/leftg.png) no-repeat;
+            cursor: pointer;
+        }
+        
+        .slider>.leftt {
+            background: url(../image/content/leftw.png) no-repeat;
+            position: absolute;
+            top: 45%;
+            left: 7px;
+            width: 15px;
+            height: 23px;
+        }
