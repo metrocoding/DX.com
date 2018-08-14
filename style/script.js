@@ -1,30 +1,97 @@
 ﻿ // fixed menu---------------------------------------------------------------------------
  window.onscroll = function() {
 
-     if (window.pageYOffset > 740) {
-         bottom.className = "fixed";
-         document.getElementById("sidebar").classList.add('side');
-     } else {
-         bottom.className = "";
-         document.getElementById("sidebar").classList.remove('side');
+         if (window.pageYOffset > 740) {
+             bottom.className = "fixed";
+             document.getElementById("sidebar").classList.add('side');
+         } else {
+             bottom.className = "";
+             document.getElementById("sidebar").classList.remove('side');
+         }
      }
+     ////===============================================================
+ window.requestAnimFrame = (function() {
+     return window.requestAnimationFrame ||
+         window.webkitRequestAnimationFrame ||
+         window.mozRequestAnimationFrame ||
+         function(callback) {
+             window.setTimeout(callback, 1000 / 60);
+         };
+ })();
+
+ // main function
+ function scrollToY(scrollTargetY, speed, easing) {
+     // scrollTargetY: the target scrollY property of the window
+     // speed: time in pixels per second
+     // easing: easing equation to use
+
+     var scrollY = window.scrollY,
+         scrollTargetY = scrollTargetY || 0,
+         speed = speed || 2000,
+         easing = easing || 'easeOutSine',
+         currentTime = 0;
+
+     // min time .1, max time .8 seconds
+     var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
+
+     // easing equations from https://github.com/danro/easing-js/blob/master/easing.js
+     var PI_D2 = Math.PI / 2,
+         easingEquations = {
+             easeOutSine: function(pos) {
+                 return Math.sin(pos * (Math.PI / 2));
+             },
+             easeInOutSine: function(pos) {
+                 return (-0.5 * (Math.cos(Math.PI * pos) - 1));
+             },
+             easeInOutQuint: function(pos) {
+                 if ((pos /= 0.5) < 1) {
+                     return 0.5 * Math.pow(pos, 5);
+                 }
+                 return 0.5 * (Math.pow((pos - 2), 5) + 2);
+             }
+         };
+
+     // add animation loop
+     function tick() {
+         currentTime += 1 / 60;
+
+         var p = currentTime / time;
+         var t = easingEquations[easing](p);
+
+         if (p < 1) {
+             requestAnimFrame(tick);
+
+             window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
+         } else {
+             console.log('scroll done');
+             window.scrollTo(0, scrollTargetY);
+         }
+     }
+
+     // call it once to get started
+     tick();
  }
+ ////===============================================================
 
 
  side8.onclick = function() {
-     window.scrollTo(0, 0);
+     scrollToY(0, 3000, 'easeInOutQuint');
  }
+
  side2.onclick = function() {
-     window.scrollTo(0, 1750);
+     scrollToY(01750, 3000, 'easeInOutQuint');
  }
+
  side3.onclick = function() {
-     window.scrollTo(0, 2370);
+     scrollToY(2370, 3000, 'easeInOutQuint');
  }
+
  side4.onclick = function() {
-     window.scrollTo(0, 2985);
+     scrollToY(2985, 3000, 'easeInOutQuint');
  }
+
  side5.onclick = function() {
-     window.scrollTo(0, 3600);
+     scrollToY(3600, 3000, 'easeInOutQuint');
  }
 
  // minitriple -----------------------------------------------------------------------------
@@ -52,6 +119,23 @@
      pos = i * -100;
      gal.style.left = i * -100 + "%";
 
+     if (i = 1) {
+         num1.style.color = "#f66907"
+     } else if (i = 2) {
+         num2.style.color = "#f66907"
+     } else if (i = 3) {
+         num3.style.color = "#f66907"
+     } else if (i = 4) {
+         num4.style.color = "#f66907"
+     } else if (i = 5) {
+         num5.style.color = "#f66907"
+     } else if (i = 6) {
+         num6.style.color = "#f66907"
+     } else if (i = 7) {
+         num7.style.color = "#f66907"
+     } else if (i = 8) {
+         num8.style.color = "#f66907"
+     }
  }
 
  setInterval("go_right()", 4000);

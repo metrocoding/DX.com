@@ -462,20 +462,19 @@
 
 #sidebar>div:hover>.barbar {
     transition: 0.3s;
-    height: 40px;
+    width: 156px;
     cursor: pointer;
     z-index: 2000;
-    direction: rtl;
 }
 
 #sidebar>div>.barbar {
     position: absolute;
     transition: 0.3s;
-    width: 156px;
-    height: 0;
+    width: 0;
+    height: 40px;
     background-color: #f66907;
     top: 0;
-    left: -156px;
+    right: 100%;
     line-height: 40px;
     color: #fff;
     font-family: Verdana, Tahoma, Arial;
@@ -483,5 +482,4 @@
     font-size: 14px;
     z-index: -500;
     overflow: hidden;
-    direction: rtl;
 }
